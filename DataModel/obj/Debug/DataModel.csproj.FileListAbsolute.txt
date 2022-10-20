@@ -1,0 +1,2 @@
+C:\Users\brenda\Desktop\Proyectos\FormAppSolution\DataModel\obj\Debug\DataModel.csproj.AssemblyReference.cache
+C:\Users\brenda\Desktop\Proyectos\FormAppSolution\DataModel\obj\Debug\DataModel.csproj.CoreCompileInputs.cache

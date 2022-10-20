@@ -45,5 +45,15 @@
     <Compile Include="SexData.cs" />
     <Compile Include="UserData.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DB\DB.csproj">
+      <Project>{3c0f4067-776e-4eab-8a3c-f2052396fd60}</Project>
+      <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{a4299965-36be-472c-8482-6e0ae4a83a16}</Project>
+      <Name>DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
