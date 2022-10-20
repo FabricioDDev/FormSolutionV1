@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DomainModel
 {
-    class Sex
+    public class Sex
     {
+        public int Id { get; set; }
+        public string Description { get; set; }
     }
 }
