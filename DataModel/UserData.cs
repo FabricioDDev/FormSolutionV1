@@ -16,12 +16,12 @@ namespace DataModel
         }
         private DataAccess data;
 
-        public List<User>Listing()
+        public List<User> ListingSP()
         {
             List<User> List = new List<User>();
             try
             {
-                data.Sp("ProcedureUserList");
+                data.Sp("StoredUserList");
                 data.Read();
                 while (data.PropReader.Read())
                 {
@@ -31,13 +31,41 @@ namespace DataModel
                     aux.UserSubName = (string)data.PropReader["UserSubName"];
                     aux.UserMail = (string)data.PropReader["UserMail"];
                     aux.UserPass = (string)data.PropReader["UserPass"];
-                    aux.BornDate = (DateTime)data.PropReader["BornDate"];
                     aux.Country = (string)data.PropReader["Country"];
-                    aux.sex = new Sex();
-                    aux.sex.Id = (int)data.PropReader["Id"];
-                    aux.sex.Description = (string)data.PropReader["Sex"];
+                    aux.SexType.Id = (int)data.PropReader["Id"];
+                    aux.SexType.Description = (string)data.PropReader["Sex"];
+                    aux.BornDate = (DateTime)data.PropReader["BornDate"];
+                    List.Add(aux);
                 }
                 return List;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { data.Close(); }
+        }
+    
+        public void InsertSP(User newUser)
+        {
+           // @UserName nvarchar(50),
+           // @UserSubName nvarchar(50),
+           // @UserMail nvarchar(100),
+           // @UserPass nvarchar(100),
+            //@BornDate smallDateTime,
+           // @IdSex int,
+           // @Country nvarchar(30)
+            try
+            {
+                data.Sp("UserInsert");
+                data.Parameters("@UserName", newUser.UserName);
+                data.Parameters("@UserSubName", newUser.UserSubName);
+                data.Parameters("@UserMail", newUser.UserMail);
+                data.Parameters("@UserPass", newUser.UserPass);
+                data.Parameters("@BornDate", newUser.BornDate);
+                data.Parameters("@IdSex", newUser.SexType.Id);
+                data.Parameters("@Country", newUser.Country);
+                data.Execute();
             }
             catch(Exception ex)
             {
@@ -45,5 +73,7 @@ namespace DataModel
             }
             finally { data.Close(); }
         }
+    
+        
     }
 }

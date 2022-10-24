@@ -67,12 +67,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ClientViews\FrmHome.aspx" />
     <Content Include="ClientViews\FrmLogin.aspx" />
     <Content Include="ClientViews\FrmSignUp.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientViews\FrmHome.aspx.cs">
+      <DependentUpon>FrmHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientViews\FrmHome.aspx.designer.cs">
+      <DependentUpon>FrmHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ClientViews\FrmLogin.aspx.cs">
       <DependentUpon>FrmLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +121,16 @@
     <Folder Include="AdmViews\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{a9ecc50b-9da3-46d9-9472-be48141ac21b}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainModel\DomainModel.csproj">
+      <Project>{a4299965-36be-472c-8482-6e0ae4a83a16}</Project>
+      <Name>DomainModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -27,6 +27,7 @@ namespace DataModel
                     Sex aux = new Sex();
                     aux.Id = (int)data.PropReader["Id"];
                     aux.Description = (string)data.PropReader["Sex"];
+                    List.Add(aux);
                 }
                 return List;
             }
