@@ -48,13 +48,6 @@ namespace DataModel
     
         public void InsertSP(User newUser)
         {
-           // @UserName nvarchar(50),
-           // @UserSubName nvarchar(50),
-           // @UserMail nvarchar(100),
-           // @UserPass nvarchar(100),
-            //@BornDate smallDateTime,
-           // @IdSex int,
-           // @Country nvarchar(30)
             try
             {
                 data.Sp("UserInsert");
@@ -72,8 +65,6 @@ namespace DataModel
                 throw ex;
             }
             finally { data.Close(); }
-        }
-    
-        
+        }   
     }
 }

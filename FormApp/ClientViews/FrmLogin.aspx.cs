@@ -15,23 +15,28 @@ namespace FormApp.ClientViews
         {
 
         }
-
         protected void BtnGo_Click(object sender, EventArgs e)
         {
             UserData userD = new UserData();
-            User user = userD.ListingSP().Find(x => x.UserMail == TxtUserMail.Text && x.UserPass == TxtUserPass.Text);
-            if (user != null)
+            try
             {
-                Session.Add("IdUser", user.Id);
-                Response.Redirect("FrmHome.aspx", false);
+                User user = userD.ListingSP().Find(x => x.UserMail == TxtUserMail.Text && x.UserPass == TxtUserPass.Text);
+                if (user != null)
+                {
+                    Session.Add("IdUser", user.Id);
+                    Response.Redirect("FrmHome.aspx", false);
+                }
+                else
+                {
+                    TxtUserMail.Text = "";
+                    TxtUserPass.Text = "";
+                    LblWarning.Text = "Vuelve a Intentarlo";
+                }
             }
-            else
+            catch(Exception ex)
             {
-                TxtUserMail.Text = "";
-                TxtUserPass.Text = "";
-                LblWarning.Text = "Vuelve a Intentarlo";
+                throw ex;
             }
-                
         }
 
         protected void BtnSignUp_Click(object sender, EventArgs e)

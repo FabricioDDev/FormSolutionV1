@@ -39,28 +39,39 @@ namespace FormApp.ClientViews
         public void ChargeDdlSex()
         {
             SexData sexData = new SexData();
-            DdlSex.DataSource = sexData.Listing();
-            DdlSex.DataValueField = "Id";
-            DdlSex.DataTextField = "Description";
-            DdlSex.DataBind();
+            try
+            {
+                DdlSex.DataSource = sexData.Listing();
+                DdlSex.DataValueField = "Id";
+                DdlSex.DataTextField = "Description";
+                DdlSex.DataBind();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
 
         protected void BtnGo_Click(object sender, EventArgs e)
         {
             UserData userData = new UserData();
             User user = new User();
-            user.UserName = TxtUserName.Text;
-            user.UserSubName = TxtUserSubName.Text;
-            user.UserMail = TxtUserMail.Text;
-            user.UserPass = TxtUserPass.Text;
-
-            
-            user.SexType.Id = int.Parse(DdlSex.SelectedItem.Value.ToString());
-
-            user.Country = DdlCountry.SelectedItem.Value.ToString();
-            user.BornDate = Convert.ToDateTime(TxtBornDate.Text);
-            userData.InsertSP(user);
-            Response.Redirect("FrmLogin.aspx", false);
+            try
+            {
+                user.UserName = TxtUserName.Text;
+                user.UserSubName = TxtUserSubName.Text;
+                user.UserMail = TxtUserMail.Text;
+                user.UserPass = TxtUserPass.Text;
+                user.SexType.Id = int.Parse(DdlSex.SelectedItem.Value.ToString());
+                user.Country = DdlCountry.SelectedItem.Value.ToString();
+                user.BornDate = Convert.ToDateTime(TxtBornDate.Text);
+                userData.InsertSP(user);
+                Response.Redirect("FrmLogin.aspx", false);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
