@@ -58,20 +58,29 @@ namespace FormApp.ClientViews
             User user = new User();
             try
             {
-                user.UserName = TxtUserName.Text;
-                user.UserSubName = TxtUserSubName.Text;
-                user.UserMail = TxtUserMail.Text;
-                user.UserPass = TxtUserPass.Text;
-                user.SexType.Id = int.Parse(DdlSex.SelectedItem.Value.ToString());
-                user.Country = DdlCountry.SelectedItem.Value.ToString();
-                user.BornDate = Convert.ToDateTime(TxtBornDate.Text);
-                userData.InsertSP(user);
-                Response.Redirect("FrmLogin.aspx", false);
+               
+                    user.UserName = TxtUserName.Text;
+                    user.UserSubName = TxtUserSubName.Text;
+                    user.UserMail = TxtUserMail.Text;
+                    user.UserPass = TxtUserPass.Text;
+                    user.SexType.Id = int.Parse(DdlSex.SelectedItem.Value.ToString());
+                    user.Country = DdlCountry.SelectedItem.Value.ToString();
+                    user.BornDate = Convert.ToDateTime(TxtBornDate.Text);
+                    userData.InsertSP(user);
+                    Response.Redirect("FrmLogin.aspx", false);
+                
+                
             }
             catch(Exception ex)
             {
                 throw ex;
             }
+        }
+        
+       
+        protected void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmLogin.aspx", false);
         }
     }
 }

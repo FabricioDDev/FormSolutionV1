@@ -15,6 +15,15 @@ namespace FormApp.ClientViews
     {
 
         /// <summary>
+        /// Control LblUserName.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblUserName;
+
+        /// <summary>
         /// Control TxtUserName.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace FormApp.ClientViews
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtUserName;
+
+        /// <summary>
+        /// Control LblUserSubName.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblUserSubName;
 
         /// <summary>
         /// Control TxtUserSubName.
@@ -33,6 +51,15 @@ namespace FormApp.ClientViews
         protected global::System.Web.UI.WebControls.TextBox TxtUserSubName;
 
         /// <summary>
+        /// Control LblUserMail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblUserMail;
+
+        /// <summary>
         /// Control TxtUserMail.
         /// </summary>
         /// <remarks>
@@ -40,6 +67,15 @@ namespace FormApp.ClientViews
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtUserMail;
+
+        /// <summary>
+        /// Control LblUserPass.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblUserPass;
 
         /// <summary>
         /// Control TxtUserPass.
@@ -51,6 +87,15 @@ namespace FormApp.ClientViews
         protected global::System.Web.UI.WebControls.TextBox TxtUserPass;
 
         /// <summary>
+        /// Control LblSex.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblSex;
+
+        /// <summary>
         /// Control DdlSex.
         /// </summary>
         /// <remarks>
@@ -58,6 +103,15 @@ namespace FormApp.ClientViews
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DdlSex;
+
+        /// <summary>
+        /// Control LblCountry.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblCountry;
 
         /// <summary>
         /// Control DdlCountry.
@@ -69,6 +123,15 @@ namespace FormApp.ClientViews
         protected global::System.Web.UI.WebControls.DropDownList DdlCountry;
 
         /// <summary>
+        /// Control LblBornDate.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblBornDate;
+
+        /// <summary>
         /// Control TxtBornDate.
         /// </summary>
         /// <remarks>
@@ -76,6 +139,15 @@ namespace FormApp.ClientViews
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtBornDate;
+
+        /// <summary>
+        /// Control CkbAllow.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox CkbAllow;
 
         /// <summary>
         /// Control BtnGo.
